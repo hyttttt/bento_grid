@@ -1,0 +1,50 @@
+/*CSS Reset*/
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 16px;
+	font-family: "DM Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	padding: 16px;
+}
+
+@media (max-width: 380px) {
+	.grid-container {
+		display: grid;
+		grid-template-columns: auto;
+	}
+}
+
+.card {
+	background-color: blue;
+	border-radius: 8px;
+}
+
+.purple-card {
+	color: white;
+	padding: 48px;
+	text-align: center;
+}
+.purple-card h1 {
+	font-weight: 500;
+    
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
