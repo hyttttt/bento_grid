@@ -7,9 +7,20 @@
 	box-sizing: border-box;
 }
 
+:root {
+	--color-bg: hsl(0, 0%, 95%);
+	--color-purple: hsl(256, 67%, 59%);
+	--color-yellow: hsl(39, 100%, 71%);
+	--color-light-purple: hsl(254, 88%, 90%);
+	--color-light-yellow: hsl(31, 66%, 93%);
+	--color-link: hsl(228, 45%, 44%);
+	--color-white: #fff;
+	--color-blue: blue;
+}
+
 html {
 	font-size: 18px;
-	background-color: hsl(0, 0%, 95%);
+	background-color: var(--color-bg);
 	font-family: "DM Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -63,7 +74,7 @@ img {
 }
 
 .card {
-	background-color: blue;
+	background-color: var(--color-blue);
 	border-radius: 8px;
 	overflow: hidden;
 	display: flex;
@@ -71,34 +82,34 @@ img {
 }
 
 .purple-card {
-	color: white;
+	color: var(--color-white);
 	padding: 5%;
 	text-align: center;
-	background-color: hsl(256, 67%, 59%);
+	background-color: var(--color-purple);
 	align-items: center;
 }
 
 .white-card {
-	background-color: white;
+	background-color: var(--color-white);
 	padding: 16px;
 }
 
 .yellow-card {
-	background-color: hsl(39, 100%, 71%);
+	background-color: var(--color-yellow);
 	padding: 16px;
 }
 
 .light-purple-card {
 	padding: 16px;
 	text-align: left;
-	background-color: hsl(254, 88%, 90%);
+	background-color: var(--color-light-purple);
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
 }
 
 .light-yellow-card {
-	background-color: hsl(31, 66%, 93%);
+	background-color: var(--color-light-yellow);
 	padding: 24px;
 }
 
@@ -187,7 +198,7 @@ img {
 	text-align: center;
 }
 .attribution a {
-	color: hsl(228, 45%, 44%);
+	color: var(--color-link);
 }
 
 @media (max-width: 600px) {
@@ -201,7 +212,7 @@ img {
 			"grow-followers"
 			"audience-growth";
 		grid-template-columns: 1fr;
-		grid-template-rows: auto;
+		grid-template-rows: repeat(6, max-content);
 	}
 
 	.flex-container {
